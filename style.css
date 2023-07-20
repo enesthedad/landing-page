@@ -1,20 +1,245 @@
 :root{
     font-size: 20px;
     font-family: 'Ubuntu',sans-serif;
+    --primary-color : ghostwhite;
+    --secondary-color:#1f2937;
+    --main-color:#DDA905;
+    --quote-color: whitesmoke; 
+    --link-color:#3b82f6;
+}
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    background-color: var(--primary-color);
+    flex-direction: column;
+}
+h1{
+    font-size: 2rem;
+    font-weight: 800;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+h4{
+    font-size: 1.2rem;
+}
+.sign-up:hover{
+    background-color: var(--main-color);
+}
+.header{
+    background-color: var(--secondary-color);
+    height: 7rem;
+    flex:1;
+    display: flex;
+    color:var(--primary-color);
+    font-size: 1.5rem;
+    padding:0.8rem 1.5rem 0.8rem 0.8rem;
+    
+}
+a{
+    text-decoration: none;
+    color:var(--primary-color);
+}
+a:hover{
+    color: var(--main-color);
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+    padding-right: 6rem;
+}
+.header-logo{
+    
+    letter-spacing: 0.25rem;
+    margin-right: auto;
+    
+    color:var(--main-color);
+}
+.container{
+    height: 75vh;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:4rem;
+    color:var(--primary-color)
+}
+.info{
+    flex: 1 1 auto;
+    padding-left: 6rem;
+    margin-right: auto;
+    
+}
+.info-img{
+    flex:3 1 auto;
+    margin-left: auto;
+    padding-right: 5rem;
+   
+}
+.info-img img{
+    height: 20rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+}
+.sign-up{
+    background-color: var(--link-color);
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.sub-info{
+    text-align: center;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:2rem;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.card{
+    width: 10rem;
+    height: 10rem;
+    object-fit:cover;
+    border: 0.2rem solid var(--link-color);
+    border-radius: 1rem;
+}
+.card:hover{
+    opacity: 0.6;
+}
+.card-info{
+    padding-top: 1rem;
+    color:grey
+}
+
+.quote-container{
+    max-height: 20rem;
+    background-color:whitesmoke;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.quote-container p{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+.author{
+    margin: 0;
+    padding-top: 0;
+    position: relative;
+}
+.sign-up-container{
+    background-color: var(--primary-color);
+
+}
+.sign-up-box{
+    
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    background-color: var(--link-color);
+    justify-content: space-around;
+    align-items: center;
+    margin: 5rem auto;
+    color:var(--primary-color);
+    gap:2rem;
+    border-radius: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.sign-up-box button{
+    border: 0.2rem solid var(--primary-color);
+    font-weight: 800;
+    font-size: 1rem;
+    
+}
+.sign-up-text{
+    font-size: 0.8rem;
+    margin-right: auto;
+    
+}
+.footer{
+    background-color: var(--secondary-color);
+    color:var(--main-color);
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.4rem;
+    font-size: 0.8rem;
+    height: 7vh;
+    padding-top: 0.9em;
+
+}
+
+
+
+@media(min-width:1400px){
+    :root{
+        font-size: 18px;
+    }
+    .sign-up-box{
+        padding-left: 6rem;
+    }
+    .sign-up-box button{
+        margin-right: 6rem;
+    }
+    .header-logo{
+        font-size: 1.7rem;
+        
+        padding-left: 6rem;
+       
+    }
 }
 @media(max-width:1400px){
     :root{
         font-size: 18px;
+    }
+    .sign-up-box{
+        padding-left: 6rem;
+    }
+    .sign-up-box button{
+        margin-right: 6rem;
+    }
+    .header-logo{
+        font-size: 1.7rem;
+        
+        padding-left: 5rem;
+       
     }
 }
 @media(max-width:1200px){
     :root{
         font-size: 16px;
     }
+    .sign-up-box{
+        padding-left: 5rem;
+    }
+    .sign-up-box button{
+        margin-right: 5rem;
+    }
+    .header-logo{
+        font-size: 1.7rem;
+        
+        padding-left: 5rem;
+       
+    }
 }
 @media(max-width:1000px){
     :root{
         font-size: 14px;
+    }
+    a{
+        font-size: 1.5rem;
     }
     .container{
         max-height: 60vh;
@@ -46,6 +271,19 @@
         padding-left: 2rem;
         
     }
+    .sign-up-box{
+        max-width: 50rem;
+        padding-left: 4rem;
+    }
+    .sign-up-text{
+        font-size: 0.8rem;
+        margin-right: auto;
+        padding-left: 1rem;
+    }
+    .sign-up-box button{
+       
+        margin-right:4rem;
+    }
     .footer{
        
         font-weight: 300;
@@ -56,197 +294,41 @@
     
     }
     .quote-container{
-    
         max-height: 10rem;
-       
         padding-top: 2rem;
     
+    }
+    .header-logo{
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        padding-left: 4rem;
+       
     }
 }
 @media(max-width:800px){
     :root{
         font-size: 12px;
     }
+    .sign-up-box{
+        
+        padding-left: 3rem;
+    }
+    .sign-up-box button{
+       
+        margin-right:3rem;
+    }
 }
 @media(max-width:600px){
     :root{
         font-size: 10px;
     }
-}
-body{
-    margin:0;
-    padding: 0;
-    display: flex;
-    background-color: white;
-    flex-direction: column;
-}
-h1{
-    font-size: 2rem;
-    font-weight: 800;
-}
-h2{
-    font-size: 1.5rem;
-    font-weight: 800;
-}
-h4{
-    font-size: 1.2rem;
-}
-.sign-up:hover{
-    background-color: #DDA905;
-}
-.header{
-    background-color: #1f2937;
-    height: 7rem;
-    
-    flex:1;
-    display: flex;
-    color:ghostwhite;
-    font-size: 1.5rem;
-    padding:0.8rem 1.5rem 0.8rem 0.8rem;
-    
-}
-a{
-    text-decoration: none;
-    color:ghostwhite;
-}
-a:hover{
-    color: #DDA905;
-}
-ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-    margin-left: auto;
-    padding-right: 6rem;
-}
-.header-logo{
-    font-size: 2rem;
-    letter-spacing: 0.25rem;
-    margin-right: auto;
-    padding-left: 6rem;
-    color:#DDA905;
-}
-.container{
-    height: 75vh;
-    background-color: #1f2937;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:4rem;
-    color:ghostwhite
-}
-.info{
-    flex: 1 1 auto;
-    padding-left: 6rem;
-    margin-right: auto;
-    
-}
-.info-img{
-    flex:3 1 auto;
-    margin-left: auto;
-    padding-right: 5rem;
-    
-}
-.info-img img{
-    height: 20rem;
-    border-radius: 1rem;
-}
-.sign-up{
-    background-color: #3b82f6;
-    color: ghostwhite;
-    font-size: 0.7rem;
-    padding: 0.5rem 1.2rem;
-    border: none;
-    border-radius: 0.5rem;
-}
-.sub-info{
-    text-align: center;
-}
-.card{
-    width: 10rem;
-    height: 10rem;
-    object-fit:cover;
-    border: 0.2rem solid #3b82f6;
-    border-radius: 1rem;
-}
-.card:hover{
-    opacity: 0.6;
-}
-.card-info{
-    padding-top: 1rem;
-    color:grey
-}
-.cards{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap:2rem;
-    padding-bottom: 2rem;
-   
-}
-.quote-container{
-    
-    max-height: 20rem;
-    background-color:whitesmoke;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-
-}
-.quote-container p{
-    padding-left: 10rem;
-    padding-right: 10rem;
-}
-.author{
-    margin: 0;
-    padding-top: 0;
-    position: relative;
-    
-}
-.sign-up-container{
-    background-color: ghostwhite;
-    
-}
-.sign-up-box{
-    
-    display: flex;
-    flex-direction: row;
-    width: 80vw;
-    background-color: #3b82f6;
-    justify-content: center;
-    align-items: center;
-    margin: 5rem auto;
-    color:ghostwhite;
-    gap:6rem;
-    border-radius: 0.5rem;
-    padding-bottom: 1rem;
-}
-
-.sign-up-box button{
-    border: 0.2rem solid ghostwhite;
-    font-weight: 800;
-    font-size: 1rem;
-    margin-right: 10rem;
-}
-.sign-up-text{
-    font-size: 0.8rem;
-    margin-right: auto;
-    padding-left: 12rem;
-}
-.footer{
-    background-color: #1f2937;
-    color:#DDA905;
-    text-align: center;
-    font-weight: 300;
-    letter-spacing: 0.4rem;
-    font-size: 0.8rem;
-    height: 7vh;
-    padding-top: 0.9em;
-
+    .header-logo{
+        font-size: 1.5rem;
+        padding-left: 2rem;
+       
+    }
+    .sign-up-box button{
+       
+        margin-right:2rem;
+    }
 }
